@@ -67,7 +67,7 @@ const Home = () => {
                         tours.map((tour, key) => (
                                 <div className={`flex ${tour.align === "right" ? "justify-end" : "justify-start"}`} key={key}>
                                     <div
-                                        className={`relative top-0 flex items-center w-[90%] h-[45vh] rounded-${tour.align === "right" ? "l" : "r"}-[20rem] overflow-hidden`}>
+                                        className={`relative top-0 flex items-center w-[90%] h-[45vh] ${tour.align === "right" ? "rounded-l-[20rem]" : "rounded-r-[20rem]"} overflow-hidden`}>
                                         <Image
                                             src={tour.image}
                                             alt={tour.word}
