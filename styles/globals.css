@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind Styles */
+* {
+    scroll-behavior: smooth;
+    --tw-bg-opacity: 1;
+}
+
+body {
+    @apply font-montserrat bg-white;
+}
+
+.navLink {
+    @apply hover:!bg-transparent hover:!bg-opacity-100 focus:!bg-transparent focus:!bg-opacity-100 active:!bg-transparent active:!bg-opacity-100 focus:!text-primary active:!text-primary;
+}
+
+.navLink:hover > .navUnderline {
+    @apply w-full;
+}
+
+.peer ~ label.flex.w-full.h-full.select-none {
+    @apply !text-primary !font-montserrat;
+}
+
+.peer.error ~ label.flex.w-full.h-full.select-none {
+    @apply !text-error-red !font-montserrat;
+}
+
+.peer:focus ~ label.flex.w-full.h-full.select-none {
+    @apply !text-primary;
+}
+
+.peer:focus ~ label::after {
+    @apply !border-b-primary;
+}
+
+label.text-gray-700.font-light.select-none.cursor-pointer.mt-px {
+    @apply !text-[0.8rem] !text-secondary !font-montserrat !font-semibold;
+}
+
+span.absolute.top-2\/4.left-2\/4.-translate-y-2\/4.-translate-x-2\/4.pointer-events-none.opacity-0.peer-checked\:opacity-100.transition-opacity.text-gray-900 {
+    @apply !text-primary;
+}
+
+input[type=radio] {
+    @apply !border-primary;
+}
+
+li:has(div.absolute.inset-0.z-10.h-full.bg-white.rounded-md.shadow){
+    @apply !text-primary;
+}
+
+/* Alerts */
+.alert {
+    min-width: 250px;
+    margin-left: -125px;
+    width: auto;
+    color: var(--alert-color);
+    background-color: var(--alert-bg);
+    border-radius: 5px;
+    padding: 16px;
+    text-align: center;
+    font-size: 17px;
+    position: fixed;
+    z-index: 10;
+    right: 2rem;
+    bottom: 3rem;
+    text-transform: capitalize;
+}
+
+.alert-success {
+    --alert-color: #0d6832;
+    --alert-bg: #d0eddb;
+}
+
+.alert-failure {
+    --alert-color: #af233a;
+    --alert-bg: #f8dbe0;
+}
+
+.alert div:first-child {
+    margin-right: 0;
+}
+
+/*.app {*/
+/*    @apply relative z-10 flex justify-center flex-col w-full;*/
+/*}*/
+
+/*.black_btn {*/
+/*    @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;*/
+/*}*/
+
+/*.outline_btn {*/
+/*    @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;*/
+/*}*/
+
+/*.head_text {*/
+/*    @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;*/
+/*}*/
+
+/*.orange_gradient {*/
+/*    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;*/
+/*}*/
+
+/*.green_gradient {*/
+/*    @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;*/
+/*}*/
+
+/*.blue_gradient {*/
+/*    @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;*/
+/*}*/
+
+/*.desc {*/
+/*    @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;*/
+/*}*/
+
+/*.search_input {*/
+/*    @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;*/
+/*}*/
+
+/*.copy_btn {*/
+/*    @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;*/
+/*}*/
+
+/*.glassmorphism {*/
+/*    @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;*/
+/*}*/
+
+/*.prompt_layout {*/
+/*    @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;*/
+/*}*/
+
+/*!* Feed Component *!*/
+/*.feed {*/
+/*    @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;*/
+/*}*/
+
+/*!* Form Component *!*/
+/*.form_textarea {*/
+/*    @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;*/
+/*}*/
+
+/*.form_input {*/
+/*    @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;*/
+/*}*/
+
+/*!* Nav Component *!*/
+/*.logo_text {*/
+/*    @apply font-satoshi font-semibold text-lg text-black tracking-wide;*/
+/*}*/
+
+/*.dropdown {*/
+/*    @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;*/
+/*}*/
+
+/*.dropdown_link {*/
+/*    @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;*/
+/*}*/
+
+/*!* PromptCard Component *!*/
+/*.prompt_card {*/
+/*    @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;*/
+/*}*/
+
+.flex-center {
+    @apply flex justify-center items-center;
+}
+
+.flex-start {
+    @apply flex justify-start items-start;
+}
+
+.flex-end {
+    @apply flex justify-end items-center;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+
+/*Menu Button*/
+.menu-btn {
+    @apply relative flex-center w-[1.5rem] h-[1.5rem] cursor-pointer transition-all ease-in-out duration-500;
+}
+
+.menu-btn--burger {
+    @apply w-[1.5rem] h-[0.1rem] bg-primary transition-all ease-in-out duration-500;
+}
+
+.menu-btn--burger::before,
+.menu-btn--burger::after {
+    @apply bg-white transition-all ease-in-out duration-500 content-[''] w-[1.5rem] h-[0.1rem] absolute;
+}
+
+.menu-btn--burger::before {
+    @apply -translate-y-[0.4rem];
+}
+
+.menu-btn--burger::after {
+    @apply translate-y-[0.4rem];
+}
+
+/*Button Arrow*/
+
+/* ANIMATION */
+.menu-btn.open .menu-btn--burger {
+    @apply bg-transparent shadow-none -translate-x-[50px];
+}
+
+.menu-btn.open .menu-btn--burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn--burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.animate-fill {
+    animation-fill-mode: forwards;
+}
