@@ -46,15 +46,15 @@ const Photography = () => {
         <>
             <Banner
                 image={PageBanner}
-                height={"h-[100%] lg:h-[40vh]"}
+                height={"h-[30vh] lg:h-[40vh]"}
                 filter={true}
             >
                 <div
-                    className="flex flex-col lg:gap-[5rem] justify-center items-start w-full
+                    className="flex flex-col lg:gap-[5rem] justify-center items-center lg:items-start w-full
                     h-full">
-                    <div className="flex flex-col gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                    <div className="flex flex-col gap-[2rem] justify-center items-center  lg:mt-0 h-full lg:h-auto">
                         <Typography variant={'h1'}
-                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>Photography.</Typography>
+                                    className={`text-white text-[2.5rem] lg:text-[8.75rem] font-extrabold font-montserrat text-center lg:text-start lg:leading-[8.75rem]`}>Photography.</Typography>
                     </div>
                 </div>
             </Banner>
@@ -66,21 +66,21 @@ const Photography = () => {
                         {
                             packages.map(
                                 (item, key) => (
-                                    <div className={"flex flex-col gap-[3rem]"} key={key}>
+                                    <div className={"flex flex-col gap-[1rem] lg:gap-[3rem]"} key={key}>
                                         <div
-                                            className={`relative flex flex-col gap-[3rem] ${item.align === "right" ? "items-end" : ""} w-full`}>
+                                            className={`relative flex flex-col gap-[3rem] ${item.align === "right" ? "lg:items-end" : ""} w-full`}>
                                             <div className="border-t border-secondary w-full"/>
                                             <div
-                                                className={`absolute -top-[1.6rem] ${item.align === "right" ? "right-[6rem]" : "left-[6rem]"} bg-white px-[1rem]`}>
+                                                className={`absolute -top-[0.8rem] lg:-top-[2.5rem] ${item.align === "right" ? "lg:right-[6rem]" : "lg:left-[6rem]"} bg-white px-[1rem]`}>
                                                 <Typography variant={'h1'}
-                                                            className={`text-secondary text-[2.5rem] xl:text-[2rem] font-extrabold font-montserrat text-start leading-0`}>
+                                                            className={`text-secondary text-[1rem] lg:text-[3rem] font-extrabold font-montserrat text-start leading-0`}>
                                                     {item.head}
                                                 </Typography>
                                             </div>
                                         </div>
                                         <div className="flex flex-col gap-[3rem]">
                                             <Typography variant={'paragraph'}
-                                                        className={`text-secondary text-justify text-[1.3rem] font-light font-montserrat leading-0`}>
+                                                        className={`text-secondary text-justify  text-[1rem] lg:text-[1.3rem] font-light font-montserrat leading-0`}>
                                                 {item.description}
                                             </Typography>
                                         </div>

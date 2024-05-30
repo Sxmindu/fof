@@ -9,14 +9,12 @@ export const tours = {
                 customer: "Sarah L."
             },
             included: [
-                "Professional Guide",
-                "Electric Bike and Safety Gear",
-                "Entrance Fees to Attractions",
-                "Complimentary Snacks and Water",
-                "Professional Photo shoot"
+                "Expert Guide",
+                "Super 73 Bike",
+                "Helmet & Safety Gear",
+                "Personal Photographer"
             ],
-            duration: "5 hours",
-            charge: "£75 per Person",
+            duration: "2 hours",
             booking: "#"
         },
         secrete: {
@@ -37,7 +35,6 @@ export const tours = {
                 "Professional Photo shoot"
             ],
             duration: "4 hours",
-            charge: "£85 per Person",
             booking: "#"
         },
         romantic: {
@@ -57,7 +54,6 @@ export const tours = {
                 "Professional Couple Photo shoot"
             ],
             duration: "3 hours",
-            charge: "£95  per Couple",
             booking: "#"
         }
     }

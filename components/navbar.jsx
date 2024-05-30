@@ -61,11 +61,11 @@ const Navbar = () => {
                             data-ripple-dark={false}
                         >
                             <ListItem
-                                className={`navLink flex flex-col rounded-none font-montserrat font-medium text-[1rem] px-[0.5rem] ${sticky ? active === ITEM.link ? "text-secondary" : "text-primary" : active === ITEM.link ? "text-cream" : "text-white"} ${sticky ? "hover:text-secondary" : "hover:text-cream"} py-0`}
+                                className={`navLink flex flex-col rounded-none font-montserrat font-medium text-[1rem] px-[0.5rem] ${sticky ? active === ITEM.link ? "text-secondary" : "text-primary" : active === ITEM.link ? "text-secondary lg:text-cream" : "text-primary lg:text-white"} ${sticky ? "hover:text-secondary" : "hover:text-cream"} py-0`}
                             >
                                 {ITEM.title}
                                 <div
-                                    className={`navUnderline flex flex-col ${sticky ? "bg-secondary" : "bg-cream"} h-[0.05rem] ${active === ITEM.link ? "w-full" : "w-0"} transition-all duration-500`}/>
+                                    className={`navUnderline flex flex-col ${sticky ? "bg-secondary" : "bg-secondary lg:bg-cream"} h-[0.05rem] ${active === ITEM.link ? "w-full" : "w-0"} transition-all duration-500`}/>
                             </ListItem>
                         </Typography>
                     ))
@@ -91,7 +91,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed ${sticky ? "bg-white shadow" : "bg-transparent"} transition-all duration-500 top-0 z-10 w-full`}>
+            <nav className={`lg:fixed ${sticky ? "bg-white shadow" : "bg-white lg:bg-transparent"} transition-all duration-500 top-0 z-10 w-full`}>
                 {/* Desktop Navigation */}
                 <div className='flex-between py-[1rem] px-[1rem] lg:px-[120px]'>
                     <Link href='/' className='flex-center gap-2'>
@@ -107,11 +107,11 @@ const Navbar = () => {
                         </div>
                         <div className="block lg:hidden">
                             <Image
-                                src={`/assets/images/logo/${sticky ? "gray" : "white"}/Horizontal.png`}
+                                src={`/assets/images/logo/gray/Horizontal.png`}
                                 alt='logo'
-                                width={50}
-                                height={50}
-                                className={`max-w-[50px] max-h-[50px]`}
+                                width={175}
+                                height={45}
+                                className={`max-w-[175px] max-h-[45px]`}
                                 priority={true}
                             />
                         </div>

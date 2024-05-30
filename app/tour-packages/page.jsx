@@ -13,7 +13,7 @@ import Section from "@/components/section";
 
 import PageBanner from "@/public/assets/images/HomeBanner.jpg";
 import Iconic from "@/public/assets/images/tours/iconic.png";
-import Secrete from "@/public/assets/images/tours/secrete.png";
+import Secret from "@/public/assets/images/tours/secrete.png";
 import Romantic from "@/public/assets/images/tours/romantic.png";
 import {tours} from "@/constants";
 
@@ -48,8 +48,8 @@ const Tour = () => {
             word: "Iconic",
         },
         {
-            image: Secrete,
-            word: "Secrete",
+            image: Secret,
+            word: "Secret",
         },
         {
             image: Romantic,
@@ -59,15 +59,16 @@ const Tour = () => {
 
     const Tour = ({tour, classname, data}) => {
         return (
-            <div className={`flex w-[50vh] h-[50vh] ${classname}`} onClick={() => handleOpen(data)}>
-                <div
-                    className={`cont relative top-0 flex items-center w-[45vh] h-[45vh] hover:w-[50vh] hover:h-[50vh] transition-all duration-500 rounded-full overflow-hidden cursor-pointer`}>
+            <div className={`flex w-[45vh] h-[45vh] lg:w-[50vh] lg:h-[50vh] ${classname}`}
+                 onClick={() => handleOpen(data)}>
+                < div
+                    className={`lg:cont relative top-0 flex items-center w-[40vh] h-[40vh] lg:w-[45vh] lg:h-[45vh] hover:lg:w-[50vh] hover:lg:h-[50vh] transition-all duration-500 rounded-full overflow-hidden cursor-pointer`}>
                     <Image
                         src={tour.image}
                         alt={tour.word}
                         width={"100%"}
                         height={"100%"}
-                        className={"absolute -z-10 object-cover overflow-hidden filter brightness-75 opacity-[.8] w-full h-full"}
+                        className={"absolute -z-10 object-cover overflow-hidden filter brightness-50 lg:brightness-75 lg:opacity-[.8] w-full h-full"}
                         priority={true}
                         loading={"eager"}
                     />
@@ -79,21 +80,21 @@ const Tour = () => {
                                 <div
                                     className="flex flex-col lg:gap-[5rem] justify-center items-center w-full h-full">
                                     <div
-                                        className="flex flex-col items-start mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                                        className="flex flex-col items-start justify-center lg:mt-0 h-full lg:h-auto">
                                         <div
-                                            className="flex flex-col items-start justify-center h-full leading-[0.8]">
+                                            className="flex flex-col items-start justify-center lg:h-full lg:leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`small text-white text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>The</Typography>
+                                                        className={`lg:small text-white text-[1.5rem] lg:text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>The</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`large text-white text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>{tour.word}</Typography>
+                                                        className={`lg:large text-white text-[2.5rem] lg:text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>{tour.word}</Typography>
 
                                         </div>
                                         <div
-                                            className="flex flex-row items-end justify-center h-full leading-[0.8]">
+                                            className="flex flex-row items-center lg:items-end justify-center gap-1 lg:gap-0 lg:h-full lg:leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`large text-white text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>London</Typography>
+                                                        className={`lg:large text-white text-[2.5rem] lg:text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>London</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`small text-white text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>Tour</Typography>
+                                                        className={`lg:small text-white text-[1.5rem] lg:text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>Tour</Typography>
                                         </div>
                                     </div>
                                 </div>
@@ -111,6 +112,7 @@ const Tour = () => {
                 size="xl"
                 open={open}
                 handler={() => handleOpen(structure)}
+                className={"m-0"}
             >
                 <DialogBody className={"p-0"}>
                     <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[100vh]`}>
@@ -174,16 +176,6 @@ const Tour = () => {
                                     </div>
                                     <div
                                         className="flex flex-col gap-[1rem] h-full lg:h-auto">
-                                        {/*<div className="grid grid-cols-2 gap-4">*/}
-                                        {/*    <div>*/}
-                                        {/*        <div*/}
-                                        {/*            className={"w-4 border border-cream transform rotate-45"}/>*/}
-                                        {/*    </div>*/}
-                                        {/*    <div>*/}
-                                        {/*        <div*/}
-                                        {/*            className={"w-8 border border-cream transform -rotate-45"}/>*/}
-                                        {/*    </div>*/}
-                                        {/*</div>*/}
                                         {
                                             data.included.map((feature, key) => (
                                                     <div className={"flex gap-4 items-center"} key={key}>
@@ -207,10 +199,6 @@ const Tour = () => {
                                                     className={`text-white text-[2rem] font-bold font-montserrat leading-[3rem] italic`}>
                                             Duration : {data.duration}
                                         </Typography>
-                                        <Typography variant={'paragraph'}
-                                                    className={`text-white text-[2rem] font-bold font-montserrat leading-[3rem] italic`}>
-                                            Price : {data.charge}
-                                        </Typography>
                                     </div>
                                     <div
                                         className="flex flex-col items-start h-full lg:h-auto w-full">
@@ -228,15 +216,15 @@ const Tour = () => {
             </Dialog>
             <Banner
                 image={PageBanner}
-                height={"h-[100%] lg:h-[40vh]"}
+                height={"h-[30vh] lg:h-[40vh]"}
                 filter={true}
             >
                 <div
-                    className="flex flex-col lg:gap-[5rem] justify-center items-start w-full
+                    className="flex flex-col lg:gap-[5rem] justify-center items-center lg:items-start w-full
                     h-full">
-                    <div className="flex flex-col gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                    <div className="flex flex-col gap-[2rem] justify-center items-center  lg:mt-0 h-full lg:h-auto">
                         <Typography variant={'h1'}
-                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>Tour
+                                    className={`text-white text-[3.5rem] lg:text-[8.75rem] font-extrabold font-montserrat text-center lg:text-start lg:leading-[8.75rem]`}>Tour
                             Packages.</Typography>
                     </div>
                 </div>
@@ -244,7 +232,7 @@ const Tour = () => {
             <Main>
                 <Sectionbreak/>
                 <Section>
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-col lg:flex-row justify-between items-center">
                         <Tour tour={tourDetails[0]} classname={"justify-center items-center"}
                               data={tours.iconic}/>
                         <Tour tour={tourDetails[1]} classname={"justify-center items-center"}

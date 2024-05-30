@@ -42,20 +42,20 @@ const swiper = (props) => {
             {
                 props.children.map((child, index) => {
                     return (
-                        <SwiperSlide key={index} className={"!w-[30%]"}>
+                        <SwiperSlide key={index} className={"!w-[80%] lg:!w-[30%]"}>
                             {child}
                         </SwiperSlide>
                     );
                 })
             }
 
-            <div className="flex items-center justify-between px-[8rem] absolute h-full top-0 z-10">
+            <div className="lg:flex items-center justify-between px-[8rem] absolute h-full top-0 z-10 hidden">
                 <div
                     className="swiper-button-prev flex flex-col justify-center items-center flex-shrink-0 text-white w-[3rem] h-[3rem] rounded-[5rem] border-[1px] border-secondary bg-secondary hover:text-secondary hover:bg-transparent">
                     <FontAwesomeIcon icon={faAngleLeft}/>
                 </div>
             </div>
-            <div className="flex items-center justify-between px-[8rem] absolute h-full top-0 right-0 z-10">
+            <div className="lg:flex items-center justify-between px-[8rem] absolute h-full top-0 right-0 z-10 hidden">
                 <div
                     className="swiper-button-next flex flex-col justify-center items-center flex-shrink-0 text-white w-[3rem] h-[3rem] rounded-[5rem] border-[1px] border-secondary bg-secondary hover:text-secondary hover:bg-transparent">
                     <FontAwesomeIcon icon={faAngleRight}/>

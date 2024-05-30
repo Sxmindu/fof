@@ -31,15 +31,15 @@ const Home = () => {
 
     const Tour = ({tour, classname}) => {
         return (
-            <div className={`flex w-[50vh] h-[50vh] ${classname}`} >
+            <div className={`flex w-[45vh] h-[45vh] lg:w-[50vh] lg:h-[50vh] ${classname}`}>
                 <div
-                    className={`cont relative top-0 flex items-center w-[45vh] h-[45vh] hover:w-[50vh] hover:h-[50vh] transition-all duration-500 rounded-full overflow-hidden cursor-pointer`}>
+                    className={`lg:cont relative top-0 flex items-center w-[40vh] h-[40vh] lg:w-[45vh] lg:h-[45vh] hover:lg:w-[50vh] hover:lg:h-[50vh] transition-all duration-500 rounded-full overflow-hidden cursor-pointer`}>
                     <Image
                         src={tour.image}
                         alt={tour.word}
                         width={"100%"}
                         height={"100%"}
-                        className={"absolute -z-10 object-cover overflow-hidden filter brightness-75 opacity-[.8] w-full h-full"}
+                        className={"absolute -z-10 object-cover overflow-hidden filter brightness-50 lg:brightness-75 lg:opacity-[.8] w-full h-full"}
                         priority={true}
                         loading={"eager"}
                     />
@@ -51,21 +51,21 @@ const Home = () => {
                                 <div
                                     className="flex flex-col lg:gap-[5rem] justify-center items-center w-full h-full">
                                     <div
-                                        className="flex flex-col items-start mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                                        className="flex flex-col items-start justify-center lg:mt-0 h-full lg:h-auto">
                                         <div
-                                            className="flex flex-col items-start justify-center h-full leading-[0.8]">
+                                            className="flex flex-col items-start justify-center lg:h-full lg:leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`small text-white text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>The</Typography>
+                                                        className={`lg:small text-white text-[1.5rem] lg:text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>The</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`large text-white text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>{tour.word}</Typography>
+                                                        className={`lg:large text-white text-[2.5rem] lg:text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>{tour.word}</Typography>
 
                                         </div>
                                         <div
-                                            className="flex flex-row items-end justify-center h-full leading-[0.8]">
+                                            className="flex flex-row items-center lg:items-end justify-center gap-1 lg:gap-0 lg:h-full lg:leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`large text-white text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>London</Typography>
+                                                        className={`lg:large text-white text-[2.5rem] lg:text-[4rem] font-extrabold font-montserrat text-start uppercase transition-all duration-500 `}>London</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`small text-white text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>Tour</Typography>
+                                                        className={`lg:small text-white text-[1.5rem] lg:text-[2rem] font-extrabold font-montserrat transition-all duration-500 `}>Tour</Typography>
                                         </div>
                                     </div>
                                 </div>
@@ -81,27 +81,24 @@ const Home = () => {
         <>
             <Banner
                 image={HomeBanner}
-                height={"h-[100%] lg:h-[100vh]"}
+                height={"h-[80vh] lg:h-[100vh]"}
                 filter={true}
             >
                 <div
                     className="flex flex-col lg:gap-[5rem] justify-center  items-end w-full
                     h-full">
-                    <div className="flex flex-col gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                    <div className="flex flex-col gap-[1rem] lg:gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
                         <Typography variant={'h1'}
-                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>Ride.</Typography>
+                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start lg:leading-[8.75rem]`}>Ride.</Typography>
                         <Typography variant={'h1'}
-                                    className={`text-cream text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>Discover.</Typography>
+                                    className={`text-cream text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start lg:leading-[8.75rem]`}>Discover.</Typography>
                         <Typography variant={'h1'}
-                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>Capture.</Typography>
+                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start lg:leading-[8.75rem]`}>Capture.</Typography>
                     </div>
                     <div className="flex flex-col gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
                         <Typography variant={'paragraph'}
-                                    className={`text-white text-center text-[1.5rem] font-montserrat leading-[3rem] italic`}>
-                            Embark on an unforgettable journey through London’s iconic landmarks and secret
-                            spots on our stylish
-                            electric bikes. Let us capture your adventure with stunning professional
-                            photography.
+                                    className={`text-white text-center text-[1rem] lg:text-[1.5rem] font-montserrat lg:leading-[3rem] italic`}>
+                            Welcome Falcons, this is where we turn ordinary London sightseeing into extraordinary electric bike adventures. Our exclusive Super 73 bikes offer not just a ride, but an eco-friendly journey through the heart of one of the world&lsquo;s most famous cities. From historic sites and secret spots to romantic escapes, discover London&lsquo;s charm uniquely and exhilaration. Ready to pedal into your next big adventure?
                         </Typography>
                     </div>
                 </div>
@@ -109,7 +106,19 @@ const Home = () => {
 
             <Main>
                 <Section>
-                    <div className="grid grid-rows-4 grid-col-4 gap-4 items-start">
+                    <div className="flex flex-col items-center justify-center w-full h-full lg:hidden">
+                        <div
+                            className="flex flex-col items-start justify-end h-full leading-[0.8] mt-[2rem] lg:mt-0">
+                            <Typography variant={'h1'}
+                                        className={`text-black text-[2.5rem] xl:text-[5rem] font-extrabold font-montserrat`}>Travel</Typography>
+                            <Typography variant={'h1'}
+                                        className={`text-black text-[3.5rem] xl:text-[10rem] font-extrabold font-montserrat text-start uppercase`}>London</Typography>
+                        </div>
+                        <Tour tour={tours[0]} classname={"justify-center items-center"}/>
+                        <Tour tour={tours[1]} classname={"justify-center items-center"}/>
+                        <Tour tour={tours[2]} classname={"justify-center items-center"}/>
+                    </div>
+                    <div className="lg:grid grid-rows-4 grid-col-4 gap-4 items-start hidden">
                         <div className="row-start-1 row-end-3 col-start-1 col-end-3">
                             <div className={"flex justify-end items-end w-full h-full"}>
                                 <Tour tour={tours[0]} classname={"justify-end items-end"}/>

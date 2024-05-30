@@ -76,15 +76,15 @@ const About = () => {
         <>
             <Banner
                 image={PageBanner}
-                height={"h-[100%] lg:h-[40vh]"}
+                height={"h-[30vh] lg:h-[40vh]"}
                 filter={true}
             >
                 <div
-                    className="flex flex-col lg:gap-[5rem] justify-center items-start w-full
+                    className="flex flex-col lg:gap-[5rem] justify-center items-center lg:items-start w-full
                     h-full">
-                    <div className="flex flex-col gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                    <div className="flex flex-col gap-[2rem] justify-center items-center  lg:mt-0 h-full lg:h-auto">
                         <Typography variant={'h1'}
-                                    className={`text-white text-[2.5rem] xl:text-[8.75rem] font-extrabold font-montserrat text-start leading-[8.75rem]`}>About
+                                    className={`text-white text-[3.5rem] lg:text-[8.75rem] font-extrabold font-montserrat text-center lg:text-start lg:leading-[8.75rem]`}>About
                             Us.</Typography>
                     </div>
                 </div>
@@ -101,17 +101,17 @@ const About = () => {
                                             className={`relative flex flex-col gap-[3rem] ${item.align === "right" ? "items-end" : ""}`}>
                                             <div className="border-t border-secondary w-full"/>
                                             <div
-                                                className={`absolute -top-[2.5rem] ${item.align === "right" ? "right-[6rem]" : "left-[6rem]"} bg-white px-[1rem]`}>
+                                                className={`absolute -top-[2rem] lg:-top-[2.5rem] ${item.align === "right" ? "right-[6rem]" : "left-[6rem]"} bg-white px-[1rem]`}>
                                                 <Typography variant={'h1'}
-                                                            className={`text-secondary text-[2.5rem] xl:text-[3rem] font-extrabold font-montserrat text-start leading-0`}>
+                                                            className={`text-secondary text-[2.5rem] lg:text-[3rem] font-extrabold font-montserrat text-start leading-0`}>
                                                     {item.head}
                                                 </Typography>
                                             </div>
                                         </div>
                                         <div className="flex flex-col gap-[3rem]">
                                             <Typography variant={'paragraph'}
-                                                        className={`text-secondary text-justify text-[1.3rem] font-light font-montserrat leading-0`}>
-                                                &ldquo; {item.description} &rdquo;
+                                                        className={`text-secondary text-justify  text-[1rem] lg:text-[1.3rem] font-light font-montserrat leading-0`}>
+                                                &ldquo;{item.description}&rdquo;
                                             </Typography>
                                         </div>
                                     </div>
@@ -127,21 +127,21 @@ const About = () => {
                             className={`relative h-[100vh] bg-[url('/assets/images/WhyUs.png')] bg-cover bg-top bg-no-repeat bg-fixed`}>
                             <div
                                 className={`flex px-[1rem] lg:px-[120px] overflow-x-clip w-full h-[100vh] justify-center"`}>
-                                <div className="mx-auto max-w-2xl lg:max-w-full lg:mx-0">
+                                <div className="mx-auto max-w-2xl lg:max-w-full lg:mx-0 w-full">
                                     <div
                                         className={`flex justify-center items-start flex-col gap-[1rem] w-full h-full`}>
                                         <div
-                                            className="flex flex-col mt-[5rem] gap-[5rem] justify-start items-center w-full h-full">
+                                            className="flex flex-col lg:mt-[5rem] lg:gap-[5rem] justify-start items-center w-full h-full">
                                             <div
-                                                className="flex flex-row lg:gap-[22.5rem] justify-center items-start">
-                                                <div className="flex flex-row gap-[2rem] h-full lg:h-auto">
+                                                className="flex flex-row gap-[2rem] lg:gap-[22.5rem] justify-center items-start">
+                                                <div className="flex flex-row h-full lg:h-auto">
                                                     <Typography variant={'h1'}
-                                                                className={`text-white text-[2.5rem] xl:text-[12.5rem] font-extrabold font-montserrat text-start leading-[8.75rem] uppercase`}>Wh<span
+                                                                className={`text-white text-[3.5rem] lg:text-[12.5rem] font-extrabold font-montserrat text-start leading-[8.75rem] uppercase`}>Wh<span
                                                         className={"text-cream"}>y</span></Typography>
                                                 </div>
-                                                <div className="flex flex-row gap-[2rem] h-full lg:h-auto">
+                                                <div className="flex flex-row h-full lg:h-auto">
                                                     <Typography variant={'h1'}
-                                                                className={`text-white text-[2.5rem] xl:text-[12.5rem] font-extrabold font-montserrat text-start leading-[8.75rem] uppercase`}><span
+                                                                className={`text-white text-[3.5rem] lg:text-[12.5rem] font-extrabold font-montserrat text-start leading-[8.75rem] uppercase`}><span
                                                         className={"text-cream"}>U</span>s?&nbsp;&nbsp;</Typography>
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@ const About = () => {
                                                                 <CardBody
                                                                     className={"flex flex-col justify-center items-center gap-[1rem]"}>
                                                                     <Typography variant="h5" color="black"
-                                                                                className="font-montserrat text-center text-[2.25rem]">
+                                                                                className="font-montserrat text-center text-[2rem] lg:text-[2.25rem]">
                                                                         {item.title}
                                                                     </Typography>
                                                                     <Image
@@ -170,8 +170,6 @@ const About = () => {
                                                         )
                                                     )
                                                 }
-
-
                                             </Swiper>
                                         </div>
                                     </div>
