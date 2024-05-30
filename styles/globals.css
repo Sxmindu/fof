@@ -223,3 +223,28 @@ li:has(div.absolute.inset-0.z-10.h-full.bg-white.rounded-md.shadow){
 .animate-fill {
     animation-fill-mode: forwards;
 }
+
+/* Swiper */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    filter: blur(2px);
+}
+
+.swiper-slide-active {
+    filter: blur(0px);
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.cont:hover > div > div > div > div > div > div > .small {
+    @apply text-[2.5rem] transition-all duration-500 ;
+}
+
+.cont:hover > div > div > div > div > div > div > .large {
+    @apply text-[4.5rem] transition-all duration-500 ;
+}

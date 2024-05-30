@@ -42,7 +42,7 @@ const Navbar = () => {
             {title: "About Us", link: "/about", status: "display", type: "single"},
             {title: "Tour Packages", link: "/tour-packages", status: "display", type: "single"},
             {title: "Photography Services", link: "/photography-services", status: "display", type: "single"},
-            {title: "Booking", link: "/booking", status: "display", type: "single"},
+            {title: "Booking", link: "/booking", status: "hide", type: "single"},
         ];
 
 
@@ -61,11 +61,11 @@ const Navbar = () => {
                             data-ripple-dark={false}
                         >
                             <ListItem
-                                className={`navLink flex flex-col rounded-none font-montserrat font-medium text-[1.3125rem] px-[0.5rem] ${sticky ? active === ITEM.link ? "text-secondary" : "text-primary" : active === ITEM.link ? "text-cream" : "text-white"} ${sticky ? "hover:text-secondary" : "hover:text-cream"} py-0`}
+                                className={`navLink flex flex-col rounded-none font-montserrat font-medium text-[1rem] px-[0.5rem] ${sticky ? active === ITEM.link ? "text-secondary" : "text-primary" : active === ITEM.link ? "text-cream" : "text-white"} ${sticky ? "hover:text-secondary" : "hover:text-cream"} py-0`}
                             >
                                 {ITEM.title}
                                 <div
-                                    className={`navUnderline flex flex-col ${sticky ? "bg-secondary" : "bg-cream"} h-[0.1rem] ${active === ITEM.link ? "w-full" : "w-0"} transition-all duration-500`}/>
+                                    className={`navUnderline flex flex-col ${sticky ? "bg-secondary" : "bg-cream"} h-[0.05rem] ${active === ITEM.link ? "w-full" : "w-0"} transition-all duration-500`}/>
                             </ListItem>
                         </Typography>
                     ))
@@ -79,7 +79,7 @@ const Navbar = () => {
                     data-ripple-dark={false}
                 >
                     <Button
-                        className={"flex justify-between items-center gap-[2rem] bg-secondary shadow-none hover:shadow-none font-montserrat font-semibold capitalize text-[1.125rem] py-[0.5rem] px-[1rem] w-fit rounded-[29px]"}>
+                        className={"flex justify-between items-center gap-[2rem] bg-secondary shadow-none hover:shadow-none font-montserrat font-semibold capitalize text-[1rem] py-[0.5rem] px-[1rem] w-fit rounded-[29px]"}>
                         Contact us
                     </Button>
                 </Typography>
@@ -101,13 +101,13 @@ const Navbar = () => {
                                 alt='logo'
                                 width={233}
                                 height={60}
-                                className={`max-w-[233px] max-h-[60px]`}
+                                className={`${sticky ? "max-w-[200px] max-h-[52px]" : "max-w-[233px] max-h-[60px]"} transition-all duration-500`}
                                 priority={true}
                             />
                         </div>
                         <div className="block lg:hidden">
                             <Image
-                                src={"/assets/images/NavLogo.png"}
+                                src={`/assets/images/logo/${sticky ? "gray" : "white"}/Horizontal.png`}
                                 alt='logo'
                                 width={50}
                                 height={50}
@@ -129,7 +129,7 @@ const Navbar = () => {
                             data-ripple-dark={false}
                         >
                             <Button
-                                className={"flex justify-between items-center gap-[2rem] bg-secondary shadow-none hover:shadow-none font-montserrat font-semibold capitalize text-[1.125rem] py-[0.5rem] px-[1rem] w-fit rounded-[29px]"}>
+                                className={`flex justify-between items-center gap-[2rem] ${sticky ? "bg-secondary" : "bg-cream text-primary"} shadow-none hover:shadow-none font-montserrat font-semibold capitalize text-[1rem] py-[0.5rem] px-[1rem] w-fit rounded-[29px]`}>
                                 Contact us
                             </Button>
                         </Typography>

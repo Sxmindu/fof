@@ -16,8 +16,8 @@ const Footer = () => {
     const LINKS = [
         {
             type: "link",
-            title: "Booking",
-            link: "/booking",
+            title: "About Us",
+            link: "/about",
             status: "display",
         },
         {
@@ -34,9 +34,9 @@ const Footer = () => {
         },
         {
             type: "link",
-            title: "About Us",
-            link: "/about",
-            status: "display",
+            title: "Booking",
+            link: "/booking",
+            status: "hide",
         },
     ];
 

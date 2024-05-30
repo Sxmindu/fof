@@ -25,6 +25,7 @@ module.exports = withMT({
         'primary': '#1E1E1E',
         'secondary': '#6A7668',
         'cream': '#F7E7CE',
+        'darkcream': '#FCD69C',
         'gray': '#828282',
         'lightGray': '#D9D9D9',
         'error-red': '#CC4545',

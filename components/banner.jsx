@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const banner = (props) => {
 
-    let {image, height, textHeight, filter, children} = props;
+    let {image, height, textHeight, filter, div, children} = props;
 
     if (textHeight === undefined) {
         textHeight = height;
@@ -11,7 +11,6 @@ const banner = (props) => {
     if (filter === undefined) {
         filter = false;
     }
-
 
     return (
         <div className={`relative top-0 w-full isolate overflow-hidden bg-primary ${height}`}>
@@ -29,7 +28,8 @@ const banner = (props) => {
                         />
                     )
             }
-            <div className={`flex px-[1rem] lg:px-[120px] overflow-x-clip w-full ${textHeight}`}>
+            <div
+                className={`flex px-[1rem] lg:px-[120px] overflow-x-clip w-full ${textHeight}`}>
                 <div className="mx-auto max-w-2xl lg:max-w-full lg:mx-0">
                     <div className={`flex justify-center items-start flex-col gap-[1rem] w-full h-full`}>
                         {children}

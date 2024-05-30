@@ -4,10 +4,10 @@ import React from "react";
 
 const mainsection = (props) => {
 
-    const { children } = props;
+    const { className, children } = props;
 
     return (
-        <main className="py-[1rem] overflow-x-clip ">
+        <main className={`py-[1rem] overflow-x-clip ${className}`}>
             {children}
         </main>
     )
