@@ -99,6 +99,15 @@ const Footer = () => {
                                 Contact us
                             </Typography>
                         </div>
+                        <div>
+                            <Typography
+                                as="a"
+                                href={"/faq"}
+                                className={`font-montserrat text-[0.875rem] transition-colors hover:text-cream focus:text-secondary cursor-pointer ${active === "/faq" ? "text-cream" : ""} `}
+                            >
+                                FAQs
+                            </Typography>
+                        </div>
                     </div>
                     <div
                         className="flex flex-col gap-[0.5rem] mt-[2rem] lg:mt-0">

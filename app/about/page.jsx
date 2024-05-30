@@ -98,10 +98,10 @@ const About = () => {
                                 (item, key) => (
                                     <div className={"flex flex-col gap-[3rem]"} key={key}>
                                         <div
-                                            className={`relative flex flex-col gap-[3rem] ${item.align === "right" ? "items-end" : ""}`}>
+                                            className={`relative flex flex-col gap-[3rem] items-center ${item.align === "right" ? "lg:items-end" : "lg:items-start"}`}>
                                             <div className="border-t border-secondary w-full"/>
                                             <div
-                                                className={`absolute -top-[2rem] lg:-top-[2.5rem] ${item.align === "right" ? "right-[6rem]" : "left-[6rem]"} bg-white px-[1rem]`}>
+                                                className={`absolute -top-[2rem] lg:-top-[2.5rem] ${item.align === "right" ? "lg:right-[6rem]" : "lg:left-[6rem]"} bg-white px-[1rem]`}>
                                                 <Typography variant={'h1'}
                                                             className={`text-secondary text-[2.5rem] lg:text-[3rem] font-extrabold font-montserrat text-start leading-0`}>
                                                     {item.head}
