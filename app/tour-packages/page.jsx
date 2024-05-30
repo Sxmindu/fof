@@ -115,8 +115,8 @@ const Tour = () => {
                 handler={() => handleOpen(structure)}
                 className={"m-0"}
             >
-                <DialogBody className={"p-0 h-[80vh] lg:h-auto"}>
-                    <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[80vh] lg:h-[100vh]`}>
+                <DialogBody className={"p-0 h-[100vh] lg:h-auto"}>
+                    <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[100vh]`}>
                         <div className={`absolute inset-0 -z-[8] bg-black  opacity-[.78]`}/>
                         <Image
                             src={data.image}
@@ -128,12 +128,12 @@ const Tour = () => {
                             className={`absolute inset-0 -z-10 h-full w-full object-cover object-center`}
                         />
                         <div
-                            className={`flex overflow-x-clip overflow-scroll lg:overflow-auto w-full h-[80vh] lg:h-[100vh]`}>
-                            <div className="flex flex-col lg:flex-row w-full h-full">
+                            className={`flex overflow-x-clip overflow-scroll lg:overflow-auto w-full h-[100vh]`}>
+                            <div className="flex flex-col gap-[1rem] lg:flex-row w-full h-full">
                                 <div
                                     className={`flex flex-col justify-between items-center lg:items-start gap-[1rem] w-full h-full p-8 pb-4 lg:p-16`}>
                                     <div
-                                        className="flex flex-col items-start mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                                        className="flex flex-col items-start mt-0 h-full lg:h-auto">
                                         <div
                                             className="flex flex-col items-start justify-center h-full leading-[0.8]">
                                             <Typography variant={'h1'}
@@ -200,17 +200,17 @@ const Tour = () => {
                                         </Typography>
                                     </div>
                                     <div
-                                        className="flex flex-col items-center lg:items-start gap-[1rem] h-full lg:h-auto">
+                                        className="flex flex-col items-center lg:items-start gap-2 lg:gap-4 h-full lg:h-auto">
                                         {
                                             data.benefits.map((benefit, key) => (
-                                                    <div className={"flex gap-4 items-center"} key={key}>
+                                                    <div className={"flex gap-2 lg:gap-4 items-center"} key={key}>
                                                         <div
-                                                            className={"relative p-[0.8rem] w-4 h-4 rounded-[10px] border border-darkcream border-r-0"}>
+                                                            className={"relative p-[0.4rem] lg:p-[0.8rem] w-2 h-2 lg:w-4 lg:h-4 rounded-[5px] lg:rounded-[10px] border border-darkcream border-r-0"}>
                                                             <FontAwesomeIcon icon={faCheck} width={"1rem"}
-                                                                             className={"absolute -top-[6px] -right-[10px] w-[2rem] max-w-[2rem] text-darkcream text-[2rem]"}/>
+                                                                             className={"absolute -top-[3px] lg:-top-[6px] -right-[5px] lg:-right-[10px] w-4 lg:w-8 max-w-4 lg:max-w-8 text-darkcream text-[1rem] lg:text-[2rem]"}/>
                                                         </div>
                                                         <Typography variant={'paragraph'}
-                                                                    className={`text-white text-start text-[1.5rem] font-light font-montserrat leading-[3rem] italic`}>
+                                                                    className={`text-white text-start text-[1rem] lg:text-[1.5rem] font-light font-montserrat leading-[3rem] italic`}>
                                                             <span className={"font-bold"}>{benefit.title}</span>
                                                         </Typography>
                                                     </div>
@@ -221,7 +221,7 @@ const Tour = () => {
                                     <div
                                         className="flex flex-col items-center lg:items-start gap-[1rem] h-full lg:h-auto w-full">
                                         <Typography variant={'paragraph'}
-                                                    className={`text-white text-[2rem] font-bold font-montserrat leading-[3rem] italic`}>
+                                                    className={`text-white text-[1.5rem] lg:text-[2rem] font-bold font-montserrat leading-[3rem] italic`}>
                                             Duration : {data.duration}
                                         </Typography>
                                     </div>
