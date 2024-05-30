@@ -124,6 +124,7 @@ const Tour = () => {
                             width={1914}
                             height={1276}
                             priority={true}
+                            loading={"eager"}
                             className={`absolute inset-0 -z-10 h-full w-full object-cover object-center`}
                         />
                         <div
@@ -173,6 +174,7 @@ const Tour = () => {
                                             width={809}
                                             height={544}
                                             priority={true}
+                                            loading={"eager"}
                                             className={`h-full w-full object-contain object-center max-h-[90%] min-w-full`}
                                         />
                                     </div>
