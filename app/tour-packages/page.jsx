@@ -115,8 +115,8 @@ const Tour = () => {
                 handler={() => handleOpen(structure)}
                 className={"m-0"}
             >
-                <DialogBody className={"p-0 h-[80vh] lg:h-auto overflow-scroll lg:overflow-auto"}>
-                    <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[100vh]`}>
+                <DialogBody className={"p-0 h-[80vh] lg:h-auto"}>
+                    <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[80vh] lg:h-[100vh]`}>
                         <div className={`absolute inset-0 -z-[8] bg-black  opacity-[.78]`}/>
                         <Image
                             src={data.image}
@@ -128,10 +128,10 @@ const Tour = () => {
                             className={`absolute inset-0 -z-10 h-full w-full object-cover object-center`}
                         />
                         <div
-                            className={`flex overflow-x-clip overflow-y-scroll lg:overflow-auto w-full h-[100vh]`}>
+                            className={`flex overflow-x-clip overflow-scroll lg:overflow-auto w-full h-[80vh] lg:h-[100vh]`}>
                             <div className="flex flex-col lg:flex-row w-full h-full">
                                 <div
-                                    className={`relative flex flex-col justify-between items-center lg:items-start gap-[1rem] w-full h-full p-8 pb-4 lg:p-16`}>
+                                    className={`flex flex-col justify-between items-center lg:items-start gap-[1rem] w-full h-full p-8 pb-4 lg:p-16`}>
                                     <div
                                         className="flex flex-col items-start mt-[2rem] lg:mt-0 h-full lg:h-auto">
                                         <div
@@ -150,7 +150,8 @@ const Tour = () => {
                                                         className={`text-white text-[2.5rem] lg:text-[3rem] font-extrabold font-montserrat leading-[1.1]`}>Tour</Typography>
                                         </div>
                                     </div>
-                                    <div className="flex flex-row flex-wrap lg:flex-nowrap gap-4 lg:gap-8 lg:mt-0 h-full lg:h-auto">
+                                    <div
+                                        className="flex flex-row flex-wrap lg:flex-nowrap gap-4 lg:gap-8 lg:mt-0 h-full lg:h-auto">
                                         {
                                             data.included.map((include, key) => (
                                                     <div className={`rounded-full bg-darkcream`} key={key}>
