@@ -115,7 +115,7 @@ const Tour = () => {
                 handler={() => handleOpen(structure)}
                 className={"m-0"}
             >
-                <DialogBody className={"p-0"}>
+                <DialogBody className={"p-0 h-[100vh] lg:h-auto overflow-scroll lg:overflow-auto"}>
                     <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[100vh]`}>
                         <div className={`absolute inset-0 -z-[8] bg-black  opacity-[.78]`}/>
                         <Image
@@ -127,29 +127,29 @@ const Tour = () => {
                             className={`absolute inset-0 -z-10 h-full w-full object-cover object-center`}
                         />
                         <div
-                            className={`flex overflow-x-clip w-full h-[100vh]`}>
-                            <div className="flex w-full h-full">
+                            className={`flex overflow-x-clip overflow-y-scroll lg:overflow-auto w-full h-[100vh]`}>
+                            <div className="flex flex-col lg:flex-row w-full h-full">
                                 <div
-                                    className={`relative flex justify-between items-start flex-col gap-[1rem] w-full h-full p-[4rem]`}>
+                                    className={`relative flex flex-col justify-between items-center lg:items-start gap-[1rem] w-full h-full p-8 pb-4 lg:p-16`}>
                                     <div
                                         className="flex flex-col items-start mt-[2rem] lg:mt-0 h-full lg:h-auto">
                                         <div
                                             className="flex flex-col items-start justify-center h-full leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`text-white text-[2.5rem] xl:text-[3rem] font-extrabold font-montserrat`}>The</Typography>
+                                                        className={`text-white text-[2.5rem] lg:text-[3rem] font-extrabold font-montserrat`}>The</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`text-white text-[2.5rem] xl:text-[8rem] font-extrabold font-montserrat text-start uppercase`}>{data.title}</Typography>
+                                                        className={`text-white text-[3.5rem] lg:text-[8rem] font-extrabold font-montserrat text-start uppercase`}>{data.title}</Typography>
 
                                         </div>
                                         <div
-                                            className="flex flex-row items-end justify-center h-full leading-[0.8]">
+                                            className="flex flex-col lg:flex-row items-end justify-center h-full leading-[0.8]">
                                             <Typography variant={'h1'}
-                                                        className={`text-white text-[2.5rem] xl:text-[8rem] font-extrabold font-montserrat text-start uppercase`}>London</Typography>
+                                                        className={`text-white text-[3.5rem] lg:text-[8rem] font-extrabold font-montserrat text-start uppercase`}>London</Typography>
                                             <Typography variant={'h1'}
-                                                        className={`text-white text-[2.5rem] xl:text-[3rem] font-extrabold font-montserrat leading-[1.1]`}>Tour</Typography>
+                                                        className={`text-white text-[2.5rem] lg:text-[3rem] font-extrabold font-montserrat leading-[1.1]`}>Tour</Typography>
                                         </div>
                                     </div>
-                                    <div className="flex flex-row gap-[2rem] mt-[2rem] lg:mt-0 h-full lg:h-auto">
+                                    <div className="flex flex-row flex-wrap lg:flex-nowrap gap-4 lg:gap-8 lg:mt-0 h-full lg:h-auto">
                                         {
                                             data.included.map((include, key) => (
                                                     <div className={`rounded-full bg-darkcream`} key={key}>
@@ -166,7 +166,7 @@ const Tour = () => {
                                         {/*    {data.description}*/}
                                         {/*</Typography>*/}
                                     </div>
-                                    <div className={"flex justify-center items-center"}>
+                                    <div className={"lg:flex justify-center items-center hidden"}>
                                         <Image
                                             src={data.map}
                                             alt="banner"
@@ -176,18 +176,28 @@ const Tour = () => {
                                             className={`h-full w-full object-contain object-center max-h-[90%] min-w-full`}
                                         />
                                     </div>
+                                    <div className={"flex justify-center items-center lg:hidden"}>
+                                        <Image
+                                            src={data.map}
+                                            alt="banner"
+                                            width={1027}
+                                            height={552}
+                                            priority={true}
+                                            className={`h-full w-full object-contain object-center max-h-[100%] min-w-full`}
+                                        />
+                                    </div>
                                 </div>
                                 <div
-                                    className={`flex justify-between items-start flex-col gap-[2rem] w-full h-full p-[4rem]`}>
+                                    className={`flex flex-col justify-between items-center lg:items-start gap-[2rem] w-full h-full p-8 pt-4 lg:p-16`}>
                                     <div
-                                        className="flex flex-col items-end h-full lg:h-auto w-full">
+                                        className="flex flex-col items-center lg:items-end h-full lg:h-auto w-full">
                                         <Typography variant={'paragraph'}
-                                                    className={`text-white text-end text-[1rem] font-light font-montserrat leading-[3rem] italic`}>
+                                                    className={`text-white text-center lg:text-end text-[1rem] font-light font-montserrat lg:leading-[3rem] italic`}>
                                             &ldquo; {data.testimonial.testimony} &rdquo; - {data.testimonial.customer}
                                         </Typography>
                                     </div>
                                     <div
-                                        className="flex flex-col gap-[1rem] h-full lg:h-auto">
+                                        className="flex flex-col items-center lg:items-start gap-[1rem] h-full lg:h-auto">
                                         {
                                             data.benefits.map((benefit, key) => (
                                                     <div className={"flex gap-4 items-center"} key={key}>
@@ -206,14 +216,14 @@ const Tour = () => {
                                         }
                                     </div>
                                     <div
-                                        className="flex flex-col items-start gap-[1rem] h-full lg:h-auto w-full">
+                                        className="flex flex-col items-center lg:items-start gap-[1rem] h-full lg:h-auto w-full">
                                         <Typography variant={'paragraph'}
                                                     className={`text-white text-[2rem] font-bold font-montserrat leading-[3rem] italic`}>
                                             Duration : {data.duration}
                                         </Typography>
                                     </div>
                                     <div
-                                        className="flex flex-col items-start h-full lg:h-auto w-full">
+                                        className="flex flex-col items-center lg:items-start h-full lg:h-auto w-full">
                                         <Button
                                             onClick={() => handleOpen(structure)}
                                             className={`flex justify-between items-center bg-darkcream text-primary shadow-none hover:shadow-none font-montserrat font-semibold capitalize text-[1.5rem] py-[0.5rem] px-[1rem] w-fit rounded-[29px]`}>
