@@ -115,7 +115,7 @@ const Tour = () => {
                 handler={() => handleOpen(structure)}
                 className={"m-0"}
             >
-                <DialogBody className={"p-0 h-[100vh] lg:h-auto overflow-scroll lg:overflow-auto"}>
+                <DialogBody className={"p-0 h-[80vh] lg:h-auto overflow-scroll lg:overflow-auto"}>
                     <div className={`relative top-0 w-full isolate overflow-hidden bg-primary h-[100vh]`}>
                         <div className={`absolute inset-0 -z-[8] bg-black  opacity-[.78]`}/>
                         <Image
