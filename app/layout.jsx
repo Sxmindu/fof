@@ -91,6 +91,9 @@ export const metadata = {
             follow: true,
         },
     },
+    verification: {
+        google: "google-site-verification=XAAeZsjqONKD26m4JsgK0L-c5dtMsLLOk0vqZLLMRms",
+    }
 }
 
 const layout = (props) => {
