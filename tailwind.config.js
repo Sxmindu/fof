@@ -29,6 +29,7 @@ module.exports = withMT({
         'gray': '#828282',
         'lightGray': '#D9D9D9',
         'error-red': '#CC4545',
+        'button-hover': '#073B3A'
       },
       keyframes: {},
       animation: {},

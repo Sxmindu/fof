@@ -246,5 +246,5 @@ li:has(div.absolute.inset-0.z-10.h-full.bg-white.rounded-md.shadow){
 }
 
 .cont:hover > div > div > div > div > div > div > .large {
-    @apply lg:text-[4.5rem] transition-all duration-500 ;
+    @apply lg:text-[5rem] transition-all duration-500 ;
 }
