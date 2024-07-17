@@ -1,6 +1,7 @@
 'use client';
 import {useState} from "react";
 import {Accordion, AccordionBody, AccordionHeader, Typography} from "@material-tailwind/react";
+import Image from "next/image";
 
 import Banner from "@/components/banner";
 import Main from "@/components/mainsection";
@@ -8,6 +9,7 @@ import Sectionbreak from "@/components/sectionbreak";
 import Section from "@/components/section";
 
 import PageBanner from "@/public/assets/images/HomeBanner.jpg";
+import Background from "@/public/assets/images/Background.png";
 
 import {faqs} from "@/constants";
 
@@ -33,7 +35,15 @@ const FAQ = () => {
                     </div>
                 </div>
             </Banner>
-            <Main>
+            <Main classname={"relative top-0 pb-0"}>
+                <Image
+                    src={Background}
+                    alt="banner"
+                    width={1920}
+                    height={1080}
+                    priority={true}
+                    className={`absolute inset-0 -z-10 h-full w-full object-cover object-top opacity-[.3] `}
+                />
                 <Sectionbreak/>
                 <Section>
                     <div className="flex flex-col gap-[3rem] lg:gap-[5rem]">
