@@ -82,7 +82,7 @@ export const AnimateGroup = (props) => {
     if (itemDelay === undefined) {
         itemDelay = true;
     }
-    let delay = -0.5;
+    let delay = -1;
     let animation = type;
     const [mobile, setMobile] = useState(false);
 
@@ -124,7 +124,7 @@ export const AnimateGroup = (props) => {
                     return (
                         <motion.div
                             key={index}
-                            // className={`w-full`}
+                            className={`flex justify-center items-center w-full`}
                             initial="hide"
                             whileInView="show"
                             exit="hide"
