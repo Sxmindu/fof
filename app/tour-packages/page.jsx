@@ -174,7 +174,7 @@ const Tour = () => {
                     <div className={"flex gap-[5rem]"}>
                         <Typography
                             as="a"
-                            href={"/tour-packages"}
+                            href={"/booking"}
                             variant="small"
                             className={`p-0`}
                             data-ripple-light={false}
