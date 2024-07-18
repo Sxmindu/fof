@@ -1,13 +1,12 @@
 'use client';
-import {useState} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+import Image from "next/image";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlay} from "@fortawesome/free-solid-svg-icons";
 import {Button, Typography} from "@material-tailwind/react";
-import Image from "next/image";
 
-import Banner from "@/components/banner";
 import Main from "@/components/mainsection";
+import Banner from "@/components/banner";
 import Section from "@/components/section";
 import Sectionbreak from "@/components/sectionbreak";
 import {AnimateGroup, fadeInUp} from "@/components/animate";
@@ -191,7 +190,7 @@ const Home = () => {
                             />
                             <Typography
                                 as="a"
-                                href={"#"}
+                                href={"/booking"}
                                 variant="small"
                                 className={`p-0 relative z-0`}
                                 data-ripple-light={false}
