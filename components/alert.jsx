@@ -1,9 +1,9 @@
 'use client'
+import React from "react";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheckCircle, faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import {Alert} from "@material-tailwind/react";
-import React from "react";
 
 const alert = (props) => {
 
